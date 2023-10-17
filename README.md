@@ -8,19 +8,9 @@ Para realizar a instalação do (<a href="https://helm.sh/docs/intro/install/">H
 
 ### Aplicação.
 
-Altere o arquivo <strong>values.yaml</strong> de acordo com sua necesidade e em seguida executar seguinte comando na raiz da aplicação.
+Altere o arquivo <strong>values.yaml</strong> de acordo com sua necessidade e em seguida execute seguinte comando na raiz da aplicação.
 
-`helm install webcolor . -n webcolor --create-namespace`
-
-`helm install my-novosga marcusrepo/novosga --version 0.1.2 -n novosga --create-namespace`
-
-Executando o comando acima serão instalados com os valores padrão, caso deseja altera-los basta executar o seguinte comando para exporta para um arquivo:
-
-`helm show values marcusrepo/novosga > values.yaml`
-
-#### Instalando o chart com os valores alterados:
-
-`helm install my-novosga marcusrepo/novosga --version 0.1.2 -f values.yaml`
+`helm install webcolor -f values.yaml -n webcolor --create-namespace`
 
 #### 2 - Verificando a instalação:
 
