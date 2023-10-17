@@ -1,0 +1,10 @@
+CHART NAME: {{ .Chart.Name }}
+CHART VERSION: {{ .Chart.Version }}
+APP VERSION: {{ .Chart.AppVersion }}
+NAMESPACE: {{ .Release.Namespace }}
+
+Obrigado por instalar webcolor app em seu cluster.
+
+Para acessar a pagina basta executar os seguintes comandos:
+
+kubectl port-forward -n {{ .Release.Namespace }} svc/{{ .Release.Name }}-service {{ .Values.service.nodePort}}:8080
