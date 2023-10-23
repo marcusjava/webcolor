@@ -10,19 +10,19 @@ Para realizar a instalação do (<a href="https://helm.sh/docs/intro/install/">H
 
 Altere o arquivo <strong>values.yaml</strong> de acordo com sua necessidade e em seguida execute seguinte comando na raiz da aplicação.
 
-```markdown
+```
 app:
-replicas: 1
-color: "blue"
-requests:
-cpu: "0.1"
-memory: "64Mi"
-limits:
-cpu: "0.1"
-memory: "64Mi"
+  replicas: 1
+  color: "blue"
+  requests:
+  cpu: "0.1"
+  memory: "64Mi"
+  limits:
+  cpu: "0.1"
+  memory: "64Mi"
 service:
-nodePort: "30000"
-type: "ClusterIP"
+  nodePort: "30000"
+  type: "ClusterIP"
 ```
 
 `helm install webcolor -f values.yaml -n webcolor --create-namespace`
